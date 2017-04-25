@@ -23,3 +23,12 @@ resources:
     memory: 64Mi
     cpu: 50m
 
+persistence:
+  enabled: true
+  storageClass: standard
+  nfs:
+    server: 192.168.1.55
+    path: "/"
+  accessMode: ReadWriteMany
+  size: 16Gi
+  datadir: "/data"
