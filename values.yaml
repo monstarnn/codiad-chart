@@ -27,8 +27,7 @@ persistence:
   enabled: true
   storageClass: standard
   nfs:
-    server: 10.240.0.2
+    server: 10.0.0.0
     path: "/exports"
   accessMode: ReadWriteMany
   size: 16Gi
-  datadir: "/data"

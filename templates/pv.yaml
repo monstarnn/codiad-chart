@@ -12,6 +12,9 @@ metadata:
     release: {{.Release.Name | quote }}
     chart: "{{.Chart.Name}}-{{.Chart.Version}}"
 spec:
+#  {{- if .Values.persistence.storageClass }}
+#  storageClassName: {{ .Values.persistence.storageClass | quote }}
+#  {{- end }}
   accessModes:
   - {{ .Values.persistence.accessMode | quote }}
   capacity:

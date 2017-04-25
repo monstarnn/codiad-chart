@@ -39,12 +39,12 @@ spec:
           initialDelaySeconds: 5
           timeoutSeconds: 1
         volumeMounts:
-        - name: data
-          mountPath: "{{ .Values.persistence.datadir }}"
+        - name: code
+          mountPath: "/code"
         resources:
 {{ toYaml .Values.resources | indent 10 }}
       volumes:
-        - name: data
+        - name: code
           {{- if .Values.persistence.enabled }}
           persistentVolumeClaim:
             claimName: "{{ printf "%s-%s" .Release.Name .Chart.Name | trunc 24 }}"
