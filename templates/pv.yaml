@@ -20,6 +20,6 @@ spec:
   capacity:
     storage: {{ .Values.persistence.size | quote }}
   nfs:
-    path: {{ .Values.persistence.nfs.path }}
+    path: {{ .Values.persistence.nfs.path }}/codiad
     server: {{ .Values.persistence.nfs.server }}
 {{- end -}}
