@@ -23,12 +23,3 @@ resources:
     memory: 64Mi
     cpu: 50m
 
-
-persistence:
-  enabled: true
-  nfs:
-    server: 127.0.0.1
-    path: "/kuberlab"
-  accessMode: ReadWriteMany
-  size: 16Gi
-  data_dir: "/data"

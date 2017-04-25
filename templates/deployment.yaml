@@ -38,16 +38,5 @@ spec:
             port: http
           initialDelaySeconds: 5
           timeoutSeconds: 1
-        volumeMounts:
-        - name: storage
-          mountPath: "{{ .Values.persistence.data_dir }}"
         resources:
 {{ toYaml .Values.resources | indent 10 }}
-      volumes:
-        - name: storage
-          {{- if .Values.persistence.enabled }}
-          persistentVolumeClaim:
-            claimName: "{{ printf "%s-%s" .Release.Name .Chart.Name | trunc 24 }}"
-          {{- else }}
-          emptyDir: {}
-          {{- end }}
