@@ -28,8 +28,8 @@ persistence:
   enabled: true
   storageClass: standard
   nfs:
-    server: 192.168.1.55
+    server: 127.0.0.1
     path: "/kuberlab"
   accessMode: ReadWriteMany
   size: 16Gi
-  logdir: "/notebooks/log_dir"
+  data_dir: "/data"
