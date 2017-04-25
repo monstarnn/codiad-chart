@@ -26,7 +26,6 @@ resources:
 
 persistence:
   enabled: true
-  storageClass: standard
   nfs:
     server: 127.0.0.1
     path: "/kuberlab"
