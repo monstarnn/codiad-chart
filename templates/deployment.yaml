@@ -41,10 +41,10 @@ spec:
         volumeMounts:
         - mountPath: /code/workspace
           name: storage
-          subPath: workspace
+          subPath: codiad/workspace
         - mountPath: /code/data
           name: storage
-          subPath: data
+          subPath: codiad/data
         resources:
 {{ toYaml .Values.resources | indent 10 }}
       volumes:
